@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What I Learned About Low-Dose Pediatric PET/CT and AI-Based Reconstruction - Blog post by Avani Bhat">
+    <meta name="keywords" content="Avani Bhat, Low-Dose PET/CT, Pediatric Imaging, AI Reconstruction, Medical Imaging, Data Science, Blog, avanibhat.com">
+    <link rel="canonical" href="https://avanibhat.com/low-dose-pediatric-pet.html">
+    <title>What I Learned About Low-Dose Pediatric PET/CT and AI-Based Reconstruction - Avani Bhat | avanibhat.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <main class="content-area">
+            <div class="cards-container" id="cardsContainer">
+                <!-- Blog Post Card -->
+                <section class="content-card blog-post-card" role="article">
+                    <div class="card-content">
+                        <a href="ai-medical-imaging.html" class="back-link">← Back to AI in Medical Imaging</a>
+                        <h1 class="blog-post-title">What I Learned About Low-Dose Pediatric PET/CT and AI-Based Reconstruction</h1>
+                        <div class="blog-post-body">
+                            <p>Medical imaging sits at an interesting intersection of physics, biology, and machine learning. While working on author and literature metadata in my current work, I came across an interesting paper focused on low-dose pediatric PET/CT, which I found fascinating and that is how I went into this deep hole to understand the problem and the question people I trying to solve when two things like imaging and AI come together.</p>
+                            
+                            <p>This post summarizes the key ideas and insights I learned along the way.</p>
+
+                            <h2>Why Low-Dose Pediatric PET Is a Hard Problem</h2>
+                            <p>PET/CT imaging is essential for diagnosing and monitoring cancer in children. However, children are significantly more radiosensitive than adults and often require repeated scans over time. This creates a fundamental tension:</p>
+                            <ul>
+                                <li>Lower dose is safer</li>
+                                <li>Higher dose is more informative</li>
+                            </ul>
+                            <p>In pediatric settings, additional constraints make things harder:</p>
+                            <ul>
+                                <li>Shorter scan times due to motion and sedation limits</li>
+                                <li>Smaller body size</li>
+                                <li>Reduced photon counts during acquisition</li>
+                            </ul>
+                            <p>Shorter scans mean fewer detected photons, which directly leads to high noise in PET images. This noise is not just a visual problem — it degrades:</p>
+                            <ul>
+                                <li>Quantitative accuracy (e.g. SUV measurements)</li>
+                                <li>Small lesion detectability</li>
+                                <li>Clinical reliability of follow-up scans</li>
+                            </ul>
+                            <p>Any AI solution must therefore denoise PET images without destroying quantitative meaning.</p>
+
+                            <h2>Thinking About Denoising at the Right Level</h2>
+                            <p>One key insight is that PET denoising is not a single problem — it can be approached at multiple levels:</p>
+                            <ul>
+                                <li><strong>Image-level denoising</strong><br>
+                                Post-reconstruction filtering or neural networks operating on PET images directly.</li>
+                                <li><strong>Cross-modal denoising (PET–CT fusion)</strong><br>
+                                Using anatomical information from CT to guide PET reconstruction.</li>
+                                <li><strong>Physics-aware reconstruction</strong><br>
+                                Incorporating acquisition physics and long-range spatial consistency into the model.</li>
+                            </ul>
+                            <p>Most traditional approaches focus heavily on the first level. Recent research suggests that the real gains come from combining all three.</p>
+
+                            <h2>PET–CT Fusion: Learning Jointly, Not Sequentially</h2>
+                            <p>CT images provide strong, high-resolution anatomical priors. PET images, on the other hand, encode metabolic activity but are noisy at low dose.</p>
+                            <p>A key conceptual shift is this:</p>
+                            <p><strong>PET and CT should be learned jointly, not treated as separate steps.</strong></p>
+                            <p>In a PET–CT fusion framework:</p>
+                            <ul>
+                                <li>PET and CT are processed by separate encoders</li>
+                                <li>Their features are combined through a fusion block</li>
+                                <li>The model learns where CT information is useful and where PET should dominate</li>
+                            </ul>
+                            <p>Fusion can be implemented through:</p>
+                            <ul>
+                                <li>Feature concatenation</li>
+                                <li>Attention mechanisms</li>
+                                <li>Gating strategies</li>
+                            </ul>
+                            <p>This allows CT to guide PET denoising specifically in low-count regions, without hallucinating activity where none exists.</p>
+
+                            <h2>The Importance of Long-Range Context in Whole-Body PET</h2>
+                            <p>Whole-body PET images exhibit long-range spatial dependencies:</p>
+                            <ul>
+                                <li>Activity in one region is often correlated with distant regions</li>
+                                <li>Noise patterns are not purely local</li>
+                            </ul>
+                            <p>Standard CNNs struggle with this because their receptive fields are limited.</p>
+                            <p>This is where state-space models (such as Mamba) become interesting. They offer:</p>
+                            <ul>
+                                <li>Efficient modeling of long-range dependencies</li>
+                                <li>Better global consistency</li>
+                                <li>A natural way to enforce coherence across the entire body</li>
+                            </ul>
+                            <p>Combining these models with physics-informed constraints helps preserve anatomical and quantitative plausibility.</p>
+
+                            <h2>Dose-Aware Diffusion Models: Adapting to Noise Levels</h2>
+                            <p>Another promising idea is dose-conditioned diffusion modeling.</p>
+                            <p>Diffusion models iteratively remove noise through a learned reverse process. For PET:</p>
+                            <ul>
+                                <li>Low-dose scans correspond to higher noise</li>
+                                <li>Different dose levels require different denoising behavior</li>
+                            </ul>
+                            <p>By conditioning the diffusion process on dose or count level, the model can:</p>
+                            <ul>
+                                <li>Adapt to varying noise regimes</li>
+                                <li>Avoid over-denoising high-quality scans</li>
+                                <li>Maintain consistency across longitudinal studies</li>
+                            </ul>
+                            <p>This is particularly important in pediatrics, where dose varies significantly between patients and follow-ups.</p>
+
+                            <h2>Final Thoughts</h2>
+                            <p>What stood out most to me is that low-dose pediatric PET is not a "denoising problem" — it is a trust problem.</p>
+                            <p>Any AI system must:</p>
+                            <ul>
+                                <li>Preserve quantitative accuracy</li>
+                                <li>Respect physical constraints</li>
+                                <li>Be interpretable enough for clinical adoption</li>
+                            </ul>
+                            <p>This makes the field challenging, but also deeply rewarding. It sits at a point where careful modeling choices matter as much as raw performance, and where interdisciplinary thinking is essential.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer" role="contentinfo">
+        <p>&copy; 2025 Avani Bhat</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
