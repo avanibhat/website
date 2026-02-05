@@ -15,22 +15,24 @@
 <body>
     <div class="app-wrapper">
         <main class="content-area">
-            <div class="cards-container" id="cardsContainer">
-                <!-- Blog Post Card -->
+            <div class="cards-container blog-posts-layout" id="cardsContainer">
+                <!-- Sidebar Card (30%) -->
+                <aside class="content-card blog-sidebar-card" role="complementary" aria-label="Related posts">
+                    <div class="card-content">
+                        <a href="ai-medical-imaging.html" class="back-link">← Back to AI in Medical Imaging</a>
+                        <h3 class="blog-sidebar-title">AI in Medical Imaging</h3>
+                        <ul class="blog-sidebar-list">
+                            <li><a href="ai-medical-imaging.html">Overview</a></li>
+                            <li><a href="low-dose-pediatric-pet.html" class="active">Low-Dose Pediatric PET/CT</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                
+                <!-- Main Content Card (70%) -->
                 <section class="content-card blog-post-card" role="article">
-                    <div class="card-content with-sidebar">
-                        <div class="blog-post-wrapper">
-                            <aside class="blog-post-sidebar" role="complementary" aria-label="Related posts">
-                                <h3>AI in Medical Imaging</h3>
-                                <ul>
-                                    <li><a href="ai-medical-imaging.html">Overview</a></li>
-                                    <li><a href="low-dose-pediatric-pet.html" class="active">Low-Dose Pediatric PET/CT</a></li>
-                                </ul>
-                            </aside>
-                            <div class="blog-post-main">
-                                <a href="ai-medical-imaging.html" class="back-link">← Back to AI in Medical Imaging</a>
-                                <h1 class="blog-post-title">What I Learned About Low-Dose Pediatric PET/CT and AI-Based Reconstruction</h1>
-                                <div class="blog-post-body">
+                    <div class="card-content">
+                        <h1 class="blog-post-title">What I Learned About Low-Dose Pediatric PET/CT and AI-Based Reconstruction</h1>
+                        <div class="blog-post-body">
                             <p>Medical imaging sits at an interesting intersection of physics, biology, and machine learning. While working on author and literature metadata in my current work, I came across an interesting paper focused on low-dose pediatric PET/CT, which I found fascinating and that is how I went into this deep hole to understand the problem and the question people are  trying to solve when two things like imaging and AI come together.</p>
                             
                             <p>This post summarizes the key ideas and insights I learned along the way.</p>
@@ -132,8 +134,6 @@
                                 <li>Be interpretable enough for clinical adoption</li>
                             </ul>
                             <p>This makes the field challenging, but also deeply rewarding. It sits at a point where careful modeling choices matter as much as raw performance, and where interdisciplinary thinking is essential.</p>
-                        </div>
-                            </div>
                         </div>
                     </div>
                 </section>
