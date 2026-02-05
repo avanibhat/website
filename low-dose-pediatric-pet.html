@@ -22,9 +22,17 @@
                         <a href="ai-medical-imaging.html" class="back-link">← Back to AI in Medical Imaging</a>
                         <h1 class="blog-post-title">What I Learned About Low-Dose Pediatric PET/CT and AI-Based Reconstruction</h1>
                         <div class="blog-post-body">
-                            <p>Medical imaging sits at an interesting intersection of physics, biology, and machine learning. While working on author and literature metadata in my current work, I came across an interesting paper focused on low-dose pediatric PET/CT, which I found fascinating and that is how I went into this deep hole to understand the problem and the question people I trying to solve when two things like imaging and AI come together.</p>
+                            <p>Medical imaging sits at an interesting intersection of physics, biology, and machine learning. While working on author and literature metadata in my current work, I came across an interesting paper focused on low-dose pediatric PET/CT, which I found fascinating and that is how I went into this deep hole to understand the problem and the question people are  trying to solve when two things like imaging and AI come together.</p>
                             
                             <p>This post summarizes the key ideas and insights I learned along the way.</p>
+
+                            <h2>To understand the problem, let's first understand a few things</h2>
+
+                            <h3>What is PET?</h3>
+                            <p>PET stands for positron emission tomography which is a medical imaging technique that shows how a body is functioning, not just the anatomy.</p>
+
+                            <h3>How PET works?</h3>
+                            <p>A small amount of radioactive tracer is injected into the body. This tracer is usually attached to a molecule similar to glucose. Inside the body the active cells absorb this tracer. Cells that are very active like cancer cells tend to consume more energy that is why they take up more tracer. Now this tracer emits signals from inside the body. And these signals are detected by the scanner. The scanner then reconstructs the image which is called then a PET scan. So a PET scan is a map of metabolic activity. This is why it is very famous for detecting tumors.</p>
 
                             <h2>Why Low-Dose Pediatric PET Is a Hard Problem</h2>
                             <p>PET/CT imaging is essential for diagnosing and monitoring cancer in children. However, children are significantly more radiosensitive than adults and often require repeated scans over time. This creates a fundamental tension:</p>
