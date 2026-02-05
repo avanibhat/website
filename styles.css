@@ -708,9 +708,11 @@ button:focus-visible, a:focus-visible {
 
 /* Blog Post Styles */
 .blog-post-card {
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
 }
 
 .blog-post-wrapper {
@@ -719,6 +721,7 @@ button:focus-visible, a:focus-visible {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 4rem;
 }
 
 .blog-post-sidebar {
@@ -726,7 +729,10 @@ button:focus-visible, a:focus-visible {
     position: sticky;
     top: 2rem;
     height: fit-content;
-    padding: 1.5rem 0;
+    padding: 1.5rem 2rem 1.5rem 0;
+    background: transparent;
+    border-right: 1px solid var(--border-color);
+    min-height: 200px;
 }
 
 .blog-post-sidebar h3 {
@@ -776,18 +782,20 @@ button:focus-visible, a:focus-visible {
 }
 
 .blog-post-card .card-content {
-    max-width: 100%;
+    max-width: 100% !important;
     padding: 3rem 4rem;
 }
 
 .blog-post-card .card-content.with-sidebar {
     padding: 3rem 0;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
     .blog-post-wrapper {
         flex-direction: column;
         gap: 2rem;
+        padding: 0 1.5rem;
     }
 
     .blog-post-sidebar {
@@ -795,7 +803,11 @@ button:focus-visible, a:focus-visible {
         top: 0;
         flex: 1;
         order: 2;
-        padding: 0;
+        padding: 1.5rem 0;
+        border-right: none;
+        border-top: 1px solid var(--border-color);
+        padding-top: 2rem;
+        margin-top: 2rem;
     }
 
     .blog-post-main {
@@ -807,7 +819,7 @@ button:focus-visible, a:focus-visible {
     }
 
     .blog-post-card .card-content.with-sidebar {
-        padding: 2rem 1.5rem;
+        padding: 2rem 0;
     }
 }
 
