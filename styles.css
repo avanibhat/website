@@ -936,6 +936,33 @@ button:focus-visible, a:focus-visible {
     outline-offset: 2px;
 }
 
+.blog-based-on {
+    font-size: 0.9rem;
+    color: var(--text-muted, #666);
+    font-style: italic;
+    margin: -0.5rem 0 1rem 0;
+}
+
+.blog-references {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+    line-height: 1.8;
+}
+
+.blog-references li {
+    margin-bottom: 0.75rem;
+}
+
+.blog-references a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.blog-references a:hover,
+.blog-references a:focus {
+    text-decoration: underline;
+}
+
 @media print {
     .nav-controls, .footer {
         display: none;
