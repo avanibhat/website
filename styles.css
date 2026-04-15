@@ -143,6 +143,15 @@ body {
     max-width: 900px;
 }
 
+.about-photo {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.2rem;
+}
+
 .about-greeting {
     font-size: 2rem;
     font-weight: 700;
