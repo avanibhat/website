@@ -464,7 +464,7 @@ body {
 }
 
 .project-card {
-    background: #18181b;
+    background: #27272a;
     padding: 2rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
@@ -529,7 +529,7 @@ body {
 }
 
 .learning-item {
-    background: #18181b;
+    background: #27272a;
     padding: 1.5rem;
     border-radius: 8px;
     border-top: 3px solid #3f3f46;
