@@ -168,18 +168,6 @@ body {
     font-weight: 400;
     color: var(--primary-color);
     margin-bottom: 2rem;
-    position: relative;
-    padding-bottom: 0.5rem;
-}
-
-.card-heading::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 1px;
-    background: var(--primary-color);
 }
 
 .card-content {
@@ -506,7 +494,7 @@ body {
 }
 
 .project-year {
-    color: var(--text-light);
+    color: #fafafa;
     font-size: 0.9rem;
     white-space: nowrap;
 }
@@ -592,9 +580,9 @@ body {
 }
 
 .nav-btn {
-    background: var(--primary-color);
-    color: var(--button-text);
-    border: none;
+    background: #27272a;
+    color: #fafafa;
+    border: 1px solid var(--border-color);
     width: 32px;
     height: 32px;
     border-radius: 6px;
