@@ -241,7 +241,6 @@ body {
 
 .info-block:hover {
     border-left-color: var(--secondary-color);
-    transform: translateX(3px);
 }
 
 .info-label {
@@ -282,7 +281,7 @@ body {
 .year-heading {
     font-size: 2.5rem;
     font-weight: 300;
-    color: #fafafa;
+    color: #fafafa !important;
     line-height: 1;
     margin: 0;
     font-variant-numeric: tabular-nums;
@@ -293,7 +292,7 @@ body {
 .year-rule {
     flex: 1;
     height: 1px;
-    background: #27272a;
+    background: #52525c;
     min-width: 0;
 }
 
@@ -516,7 +515,6 @@ body {
 .project-link:hover, .project-link:focus {
     color: var(--text-color);
     border-bottom-color: transparent;
-    transform: translateX(5px);
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
 }
