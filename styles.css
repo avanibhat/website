@@ -6,18 +6,18 @@
 }
 
 :root {
-    --primary-color: #18251E;
-    --secondary-color: #18251E;
-    --tertiary-color: #18251E;
-    --accent-color: #18251E;
-    --text-color: #18251E;
-    --text-light: rgba(24, 37, 30, 0.7);
-    --bg-color: #F3F7F5;
-    --bg-light: #A9C7B7;
-    --card-bg: #CEDFD6;
-    --border-color: rgba(24, 37, 30, 0.2);
-    --button-color: #18251E;
-    --button-text: #CEDFD6;
+    --primary-color: #fafafa;
+    --secondary-color: #e4e4e7;
+    --tertiary-color: #a1a1aa;
+    --accent-color: #62a400;
+    --text-color: #fafafa;
+    --text-light: #a1a1aa;
+    --bg-color: #09090b;
+    --bg-light: #18181b;
+    --card-bg: #18181b;
+    --border-color: #27272a;
+    --button-color: #3f3f46;
+    --button-text: #fafafa;
     --transition: all 0.3s ease;
     --rail-width: 320px;
     --card-padding: 3rem;
@@ -69,8 +69,8 @@ body {
 .top-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+    justify-content: flex-end;
+    padding: 0.75rem 2rem;
     flex-shrink: 0;
     border-bottom: 1px solid var(--border-color);
 }
@@ -245,9 +245,9 @@ body {
 
 .info-block {
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.5);
+    background: #27272a;
     border-radius: 8px;
-    border-left: 3px solid var(--primary-color);
+    border-left: 3px solid #3f3f46;
     transition: var(--transition);
 }
 
@@ -397,7 +397,7 @@ body {
 .exp-box-panel {
     padding: 1rem 1rem 1.25rem 1rem;
     border-top: 1px solid var(--border-color);
-    background: rgba(255, 255, 255, 0.4);
+    background: #27272a;
     animation: slideDown 0.3s ease-out;
 }
 
@@ -476,23 +476,18 @@ body {
 }
 
 .project-card {
-    display: block;
-    background: rgba(255, 255, 255, 0.6);
+    background: #18181b;
     padding: 2rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
     transition: var(--transition);
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
 }
 
 .project-card:hover {
-    border-color: var(--primary-color);
-    background: rgba(255, 255, 255, 0.95);
+    border-color: #3f3f46;
+    background: #27272a;
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(24, 37, 30, 0.18);
-    outline: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .project-header {
@@ -546,10 +541,10 @@ body {
 }
 
 .learning-item {
-    background: rgba(255, 255, 255, 0.6);
+    background: #18181b;
     padding: 1.5rem;
     border-radius: 8px;
-    border-top: 3px solid var(--tertiary-color);
+    border-top: 3px solid #3f3f46;
     transition: var(--transition);
 }
 
@@ -630,7 +625,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(169, 199, 183, 0.8);
+    background-color: #09090b;
     color: var(--text-light);
     text-align: center;
     padding: 1rem;
