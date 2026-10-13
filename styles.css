@@ -1016,3 +1016,9 @@ button:focus-visible, a:focus-visible {
         margin-bottom: 2rem;
     }
 }
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}

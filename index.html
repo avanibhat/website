@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Avani Bhat - Data Scientist focused on applied analytics and healthcare data. Building scalable solutions for biomedical and clinical research. Visit avanibhat.com">
-    <meta name="keywords" content="Avani Bhat, Data Scientist, Healthcare Data, Biomedical Analytics, Machine Learning, avanibhat.com">
+    <meta name="description" content="Avani Bhat - Data Scientist building LLM systems, knowledge graphs, and explainable AI for biomedical and clinical data. Visit avanibhat.com">
+    <meta name="keywords" content="Avani Bhat, Data Scientist, Biomedical AI, LLM, RAG, Knowledge Graphs, Explainable AI, avanibhat.com">
     <meta name="author" content="Avani Bhat">
     <meta name="robots" content="index, follow">
     
@@ -12,14 +12,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://avanibhat.com/">
     <meta property="og:title" content="Avani Bhat | Data Scientist | avanibhat.com">
-    <meta property="og:description" content="Data Scientist focused on applied analytics and healthcare data. Building scalable solutions for biomedical and clinical research.">
+    <meta property="og:description" content="Data Scientist building LLM systems, knowledge graphs, and explainable AI for biomedical and clinical data.">
     <meta property="og:site_name" content="avanibhat.com">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://avanibhat.com/">
     <meta property="twitter:title" content="Avani Bhat | Data Scientist | avanibhat.com">
-    <meta property="twitter:description" content="Data Scientist focused on applied analytics and healthcare data. Building scalable solutions for biomedical and clinical research.">
+    <meta property="twitter:description" content="Data Scientist building LLM systems, knowledge graphs, and explainable AI for biomedical and clinical data.">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://avanibhat.com/">
@@ -48,9 +48,16 @@
                         <img src="Avani_photo_website.jpeg" alt="Avani Bhat" class="about-photo">
                         <h3 class="about-greeting">Hi I'm Avani Bhat</h3>
                         <p class="about-intro">
-                            I'm a Data Scientist  and I love working with health care data to solve real-world clinical and biomedical problems. 
-                            I've exprience working with clinical metadata from ontologies to imaging data. 
-                            I'm particularly interested in making these datasets usable, interpretable, and reproducible for downstream analysis.        
+                            I'm a data scientist with a background in Life Science Informatics, and I build AI systems for biomedical and clinical data.
+                            Most of my work sits where language models meet structured knowledge. I've built RAG pipelines and agentic workflows,
+                            exposed them as MCP servers so other LLM clients can use them, and evaluated them with LLM-as-judge frameworks.
+                            Before that, I validated Alzheimer's disease knowledge graphs at Fraunhofer SCAI, combined BERT embeddings with
+                            RDF graph embeddings for literature recommendation at ZB MED, and mapped 50,000 biomedical preprints at EMBO.
+                        </p>
+                        <p class="about-intro">
+                            What I care about most is whether a model can be trusted. That means checking its outputs against sources,
+                            explaining its predictions, and building pipelines that someone else can rerun and get the same answer.
+                            I'm looking for research and applied roles in biomedical AI, LLM systems, and knowledge graphs, including PhD positions.
                         </p>
                         
                         <div class="about-social">
@@ -62,19 +69,19 @@
                         <div class="info-blocks">
                             <div class="info-block">
                                 <div class="info-label">Role</div>
-                                <div class="info-value">Data Scientist</div>
+                                <div class="info-value">Data Scientist, Biomedical AI</div>
                             </div>
                             <div class="info-block">
                                 <div class="info-label">Focus</div>
-                                <div class="info-value">Applied analytics & healthcare data, building scalable solutions for biomedical research</div>
+                                <div class="info-value">LLM systems (RAG, agents, MCP), knowledge graphs, and trustworthy, explainable AI for biomedical and clinical data</div>
                             </div>
                             <div class="info-block">
                                 <div class="info-label">Stack</div>
-                                <div class="info-value">Python, SQL, PyTorch, TensorFlow, Scikit-learn, Pandas, Neo4j, Docker, GitHub</div>
+                                <div class="info-value">Python, PyTorch, HuggingFace, LangGraph, MCP, ChromaDB, RDF/SPARQL, Neo4j, FastAPI, Docker, SQL</div>
                             </div>
                             <div class="info-block">
                                 <div class="info-label">Experience</div>
-                                <div class="info-value">2+ years building & shipping data science solutions</div>
+                                <div class="info-value">Research roles at EMBO, ZB MED, and Fraunhofer SCAI</div>
                             </div>
                             <div class="info-block">
                                 <div class="info-label">Education</div>
@@ -82,7 +89,7 @@
                             </div>
                             <div class="info-block">
                                 <div class="info-label">Location</div>
-                                <div class="info-value">Heidelberg, Germany</div>
+                                <div class="info-value">Bornheim (near Bonn), Germany</div>
                             </div>
                         </div>
                     </div>
@@ -107,7 +114,7 @@
                                                 <div class="exp-box-org">
                                                     <a href="https://www.embo.org/" target="_blank">EMBO</a>, Heidelberg
                                                 </div>
-                                                <time class="exp-box-date" datetime="2025-09">Sep 2025 – Present</time>
+                                                <time class="exp-box-date" datetime="2025-09">Sep 2025 – Feb 2026</time>
                                             </div>
                                         </summary>
                                         <div class="exp-box-panel">
@@ -232,45 +239,68 @@
                         <div class="projects-grid">
                             <div class="project-card">
                                 <div class="project-header">
-                                    <h3 class="project-title">Neuroquery — Alzheimer's Disease Research Assistant</h3>
+                                    <h3 class="project-title">NeuroQuery — RAG System with LLM Evaluation</h3>
                                     <span class="project-year">2025</span>
                                 </div>
                                 <p class="project-description">
-                                    Built a Retrieval-Augmented Generation (RAG) system for querying Alzheimer's disease research literature.
-                                    Uses BioBERT for biomedical-domain embeddings, ChromaDB for semantic vector search, and Groq (Llama 3.3 70B)
-                                    for grounded, source-cited answer generation. Ingests PubMed abstracts via the Entrez API and local PDFs,
-                                    served through a FastAPI backend with a vanilla JS chat interface.
+                                    A retrieval augmented generation system for Alzheimer's disease literature. BioBERT embeddings and ChromaDB handle retrieval over PubMed abstracts and local PDFs, and Llama 3.3 70B (via Groq) generates source cited answers, served through FastAPI and Docker. An LLM-as-judge framework scores retrieval precision@5, answer faithfulness, and completeness, and compares dense against sparse retrieval.
                                 </p>
-                                <a href="https://github.com/avanibhat/Neuroquery" target="_blank" class="project-link">GitHub →</a>
+                                <div class="project-links">
+                                    <a href="https://github.com/avanibhat/Neuroquery" target="_blank" class="project-link">GitHub →</a>
+                                </div>
                             </div>
-
                             <div class="project-card">
                                 <div class="project-header">
-                                    <h3 class="project-title">Biomedical Imaging & Computational Pathology</h3>
+                                    <h3 class="project-title">Agentic Data Analyst</h3>
+                                    <span class="project-year">2026</span>
+                                </div>
+                                <p class="project-description">
+                                    An autonomous agent built with LangGraph (ReAct pattern) and Llama 3.3 70B that takes any tabular dataset, profiles it, selects and runs statistical tests, detects anomalies, generates plots, and writes a structured report without human input. The toolkit is exposed as an MCP server so LLM clients such as Claude Desktop can call it, with a Streamlit UI for standalone use.
+                                </p>
+                                <div class="project-links">
+                                    <a href="https://github.com/avanibhat/agentic-data-analyst" target="_blank" class="project-link">GitHub →</a>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <h3 class="project-title">HNSC Clinical Decision Support Explorer</h3>
+                                    <span class="project-year">2026</span>
+                                </div>
+                                <p class="project-description">
+                                    An end to end clinical data pipeline over 528 head and neck cancer patients from TCGA (GDC API), harmonizing demographics, treatment, molecular markers, and outcomes. Includes Kaplan–Meier survival curves, Cox proportional hazards regression, and Gower distance patient similarity matching, deployed as an interactive dashboard on Hugging Face Spaces.
+                                </p>
+                                <div class="project-links">
+                                    <a href="https://github.com/avanibhat/hnsc-clinical-explorer" target="_blank" class="project-link">GitHub →</a>
+                                    <a href="https://huggingface.co/spaces/avanibhat/hnsc-clinical-explorer" target="_blank" class="project-link">Live demo →</a>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <h3 class="project-title">Pancreas Fate Validation — Single-Cell Trajectories</h3>
+                                    <span class="project-year">2026</span>
+                                </div>
+                                <p class="project-description">
+                                    Tests whether CellRank 2 fate drivers inferred from RNA velocity agree with known regulators of mouse pancreatic endocrine development (scVelo, 3,696 cells). Known regulators such as Arx (Alpha) and Hhex (Delta) rank first for their lineages. Also compares TF expression against CollecTRI regulatory activity (decoupler) and documents limitations, including a Beta fate sink bias and anchor set sensitivity.
+                                </p>
+                                <div class="project-links">
+                                    <a href="https://github.com/avanibhat/pancreas-fate-validation" target="_blank" class="project-link">GitHub →</a>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <h3 class="project-title">Brain MRI Classification with Explainable AI</h3>
                                     <span class="project-year">2025</span>
                                 </div>
                                 <p class="project-description">
-                                    Developed deep learning models for tumor tissue segmentation using custom CNNs and fine-tuned ResNet architectures.
-                                    Implemented structured preprocessing and feature extraction pipelines using PyRadiomics and classical image processing.
-                                    Applied Grad-CAM to interpret model predictions and assess anatomical relevance.
+                                    Custom CNNs and fine tuned ResNet models in PyTorch for brain tumor MRI classification, with structured preprocessing, training, and evaluation pipelines. Grad-CAM shows where each model looks, and per class precision, recall, and attention analysis across augmentation strategies diagnoses class specific failure modes.
                                 </p>
-                                <a href="https://github.com/avanibhat?tab=repositories" target="_blank" class="project-link">GitHub →</a>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-header">
-                                    <h3 class="project-title">Diabetes Risk Prediction</h3>
-                                    <span class="project-year">2024</span>
+                                <div class="project-links">
+                                    <a href="https://github.com/avanibhat/CNN_classification_Brain_tumor" target="_blank" class="project-link">GitHub →</a>
                                 </div>
-                                <p class="project-description">
-                                    Built ML models (Random Forest, Logistic Regression) to predict diabetes based on women's health metrics.
-                                    Evaluated performance using ROC AUC and F1 score; highlighted predictive features like BMI and pregnancies.
-                                </p>
-                                <a href="https://github.com/avanibhat/Pima_Indian_Diabetes_Project" target="_blank" class="project-link">GitHub →</a>
                             </div>
-            </div>
-        </div>
-    </section>
+                        </div>
+                    </div>
+                </section>
 
                 <!-- Learning Card -->
                 <section id="learning" class="content-card" role="region" aria-labelledby="learning-heading">
